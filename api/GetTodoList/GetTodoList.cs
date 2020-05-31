@@ -20,14 +20,12 @@ namespace TodoList.Functions
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
 
-            var todos = new List<Todo> {
-              new Todo{Title = "Read Microfronts book", IsCompleted = false},
-              new Todo{Title = "Post a blog about Project Tye", IsCompleted = false},
-              new Todo{Title = "Get some exercises", IsCompleted = true},
-              new Todo{Title = "Do more stuff", IsCompleted = false},
-          };
-
-            return new OkObjectResult(todos);
+            return await Task.FromResult(new OkObjectResult(new List<Todo> {
+              new Todo{ Title = "Read Microfronts book", IsCompleted = false},
+              new Todo{ Title = "Post a blog about Project Tye", IsCompleted = false},
+              new Todo{ Title = "Get some exercises", IsCompleted = true},
+              new Todo{ Title = "Do more stuff", IsCompleted = false},
+          }));
         }
     }
 }
