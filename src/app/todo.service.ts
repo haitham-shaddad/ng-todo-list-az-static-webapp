@@ -8,6 +8,6 @@ export class TodoService {
 
 
  getTodoList() {
-    return fetch('http://localhost:7071/api/GetTodoList');
+    return fetch('api/GetTodoList');
   }
 }
