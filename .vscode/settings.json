@@ -4,5 +4,11 @@
     "azureFunctions.projectRuntime": "~2",
     "debug.internalConsoleOptions": "neverOpen",
     "azureFunctions.preDeployTask": "npm prune",
-    "azureFunctions.postDeployTask": "npm install"
+    "azureFunctions.postDeployTask": "npm install",
+    "liveServer.settings.multiRootWorkspaceName": "ng-todo-list-az-static-webapp",
+    "liveServer.settings.proxy": {
+        "enable": true,
+        "baseUri": "/api",
+        "proxyUri": "http://127.0.0.1:7071/api"
+     }
 }
